@@ -1,18 +1,18 @@
 import React, { useState } from 'react';
 
 const Announcement = () => {
-  const [data, setData] = useState([
-    {
-      id: 1,
-      name: 'Квартира в екб',
-      decription: 'возможное описание',
-      adress: 'тут будет адрес',
-    },
-  ]);
+  const [data, setData] = useState({
+    id: 1,
+    name: 'Квартира в екб',
+    decription: 'возможное описание',
+    adress: 'тут будет адрес',
+  });
   return (
     <div>
       <h2>Объявления</h2>
-      {<li>{data.name}</li>}
+      <p>
+        {data.id}. Название объявления: "{data.name}" Адрес: {data.adress}
+      </p>
     </div>
   );
 };
